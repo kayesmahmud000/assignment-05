@@ -33,7 +33,7 @@
                 </div>
                 <div class="navbar-end gap-2 lg:gap-3   lg:text-2xl  text-gray-500 font-bold">
                   <img class="w-4  lg:w-8" src="./assets/coin.png" alt="">
-                  <h2>5500 <span> BDT</span></h2>
+                  <h2 ><span id="current-balance">5500</span> BDT</h2>
                 </div>
               </div>
         </section>
@@ -58,14 +58,14 @@
             <div class=" space-y-3"> 
               <div class="text-xl flex gap-2 mb-7 bg-gray-200 px-6 py-4 w-fit rounded-lg text-gray-500 font-bold">
                 <img src="./assets/coin.png" alt="">
-                <h2>0<span> BDT</span></h2>
+                <h2 ><span id="donate-balance">0</span> BDT</h2>
               </div>
               <h2 class="text-xl  font-bold">Donate for Flood at Noakhali, Bangladesh</h2>
               <p class="py-6">
                 The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
               </p>
-              <input type="text" placeholder="Type here" class="input input-bordered w-full " />
-              <button class="btn w-full text-lg font-bold  bg-[#B4F461]">Donate Now</button>
+              <input id="donate-amount" type="text" placeholder="Type here" class="input input-bordered w-full " />
+              <button id="donate-btn1" class="btn w-full text-lg font-bold  bg-[#B4F461]">Donate Now</button>
             </div>
           </div>
         </div>
@@ -140,5 +140,8 @@
 
       </section>
     </main>
+    <script src="./js/reuse.js"></script>
+    <script src="./js/index.js"></script>
+    
 </body>
 </html>
