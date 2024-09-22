@@ -1,17 +1,36 @@
-document.getElementById('donate-btn').addEventListener('click', function(){
+
+
+document.getElementById('donate-btn').addEventListener('click', function(event){
+    event.preventDefault();
     const currentBalance = getTextValueById('current-balance');
     const donateAmount = getInputValueById('donate-amount');
      const donateBalance = getTextValueById('donate-balance');
-    let balance =0;
-      const newBalance = currentBalance -donateAmount;
-      document.getElementById('current-balance').innerText =newBalance;
-      balance = donateBalance +donateAmount ;
-       document.getElementById('donate-balance').innerText =balance;
-
-       document.getElementById('show-modal').classList.remove('hidden')
     
      
+     let balance =0;
+    
+     if(donateAmount < 0){
+         alert('Please enter the valid donation amount');
+          return ;  
+      } 
+    if(currentBalance < donateAmount){
+     alert('Please enter the valid donation amount')
+     return ;
 
+    }else{
+
+        const newBalance = currentBalance -donateAmount;
+
+        document.getElementById('current-balance').innerText =newBalance;
+        balance = donateBalance +donateAmount ;
+         document.getElementById('donate-balance').innerText =balance;
+         document.getElementById('show-modal').classList.remove('hidden')
+
+    }
+    
+        
+
+       
 })
 
 
@@ -49,3 +68,4 @@ document.getElementById('donate-btn2').addEventListener('click', function(){
      
 
 })
+
