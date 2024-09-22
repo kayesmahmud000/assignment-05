@@ -26,8 +26,8 @@
   - Clicking the "Donation" button will hide the history and display the donation data.
 - **Donation Functionality for Each Card**:
   - When the "Donate Now" button is clicked:
-    - The donation input will be deducted from the total account balance, and the updated balance will be shown.
-    - The card’s current donation amount will increase.
+    - The donation input will be deducted from the total account balance, and the updated balance will be shown.✔️
+    - The card’s current donation amount will increase.✔️
     - A meaningful notification will be added to the History section.
 - **Input Validation**:
   - Show an alert if invalid data is found and stop the transaction.
