@@ -39,8 +39,8 @@
         </section>
        <section class="  w-11/12 mx-auto justify-center flex pt-14 pb-6">
         <div class="flex gap-4">
-          <button id="donation-btn" class="btn bg-[#B4F461] border px-10 py-5 btn-lg">Donation</button>
-          <button class="btn px-10 py-5 btn-xs   border-2 border-slate-300 bg-white  btn-lg">History  </button>
+          <button id="donation-btn" class="btn bg-lime-300 border-2  border-slate-300 px-10 py-5 btn-lg">Donation</button>
+          <button id="history-btn" class="btn px-10 py-5 btn-xs  border-2  border-slate-300   btn-lg">History  </button>
         </div>
        </section>
        <div class="divider"></div>
@@ -50,7 +50,7 @@
 
     <main class="mb-48">
       <!-- donation part 01 -->
-      <section>
+      <section id="donation-card">
         <div class=" w-11/12 mx-auto justify-center flex">
           <div class="hero-content gap-7 flex-col lg:flex-row border-2 shadow-xl border-gray-200 my-5 rounded-lg">
             <img
@@ -61,7 +61,7 @@
                 <img src="./assets/coin.png" alt="">
                 <h2 ><span id="donate-balance1">0</span> BDT</h2>
               </div>
-              <h2 class="text-xl  font-bold">Donate for Flood at Noakhali, Bangladesh</h2>
+              <h2 id="title1" class="text-xl  font-bold">Donate for Flood at Noakhali, Bangladesh</h2>
               <p class="py-6">
                 The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
               </p>
@@ -82,7 +82,7 @@
                 <img src="./assets/coin.png" alt="">
                 <h2><span id="donate-balance2">0</span> BDT</h2>
               </div>
-              <h2 class="text-xl  font-bold">Donate for Flood Relief in Feni,Bangladesh</h2>
+            <h2 id="title2" class="text-xl  font-bold">Donate for Flood Relief in Feni,Bangladesh</h2>
               <p class="py-6">
                 The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.
               </p>
@@ -102,12 +102,12 @@
                 <img src="./assets/coin.png" alt="">
                 <h2><span id="donate-balance3">0</span> BDT</h2>
               </div>
-              <h2 class="text-xl  font-bold">Aid for Injured in the Quota Movement</h2>
+              <h2 id="title3" class="text-xl  font-bold">Aid for Injured in the Quota Movement</h2>
               <p class="py-6">
                 The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
               </p>
               <input id="donate-amount3" type="number" placeholder="Write Donation Amount" class="input input-bordered w-full " />
-              <button id="donate-btn3" class="btn w-full text-lg font-bold  bg-[#B4F461]" onclick="donate(3)">Donate Now</button>
+              <button id="donate-btn3" class="btn w-full text-lg font-bold  bg-[#b4f461]" onclick="donate(3)">Donate Now</button>
             </div>
           </div>
         </div>
@@ -128,12 +128,13 @@
     </div>
      
       <!-- history section  -->
-      <section class="hidden">
-        <div></div>
-
-      </section>
+      <div id="historySection" class=" justify-center grid grid-cols-1 ">
+        <div id="historyList" class=" hidden w-11/12 px-4 mx-auto py-4   ">
+            <!-- History items will be added here -->
+        </div>
+        </div>
     </main>
-    <script src="./js/reuse.js"></script>
+    
     <script src="./js/index.js"></script>
     <script src="./js/part2.js"></script>
     

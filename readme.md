@@ -37,7 +37,7 @@
     - If the input field is empty.
 - **History Section**:
   - The history section will display transaction notifications, including:
-    - Date and time of the transaction.
+    - Date and time of the transaction and time zone.
     - Donation amount.
     - Donation name.
 
