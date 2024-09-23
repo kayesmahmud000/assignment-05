@@ -15,29 +15,65 @@
     }
    </style>
 </head>
-<body class=" ">
-    <section class=" max-w-lg">
-        <div class="collapse collapse-arrow bg-base-200">
-            <input type="radio" name="my-accordion-2" checked="checked" />
-            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-            <div class="collapse-content">
-              <p>hello</p>
+<body class="font-lexen">
+  <header>
+    <section class="nav-section  p-5 bg-[#F9F7F3]">
+      <div class="navbar  w-11/12 mx-auto ">
+          <div class="navbar-start">
+            <div id="home-btn hover:bg-lime-200" class="btn bg-[#B4F461] px-5 text-2xl">
+              Home
             </div>
           </div>
-          <div class="collapse collapse-arrow bg-base-200">
-            <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-            <div class="collapse-content">
-              <p>hello</p>
-            </div>
+          <div class="navbar-center">
+            <div class="font-bold flex items-center gap-3 text-2xl">
+              <img src="./assets/logo.png" alt="">
+              <h1 class=" hidden lg:flex"> Donate Bangladesh</h1>
+             </div>
           </div>
-          <div class="collapse collapse-arrow bg-base-200">
-            <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
-            <div class="collapse-content">
-              <p>hello</p>
-            </div>
+          <div class="navbar-end gap-2 lg:gap-3   lg:text-2xl  text-gray-500 font-bold">
+            <img class="w-4  lg:w-8" src="./assets/coin.png" alt="">
+            <h2 ><span id="current-balance">5500</span> BDT</h2>
           </div>
-    </section>
+        </div>
+  </section>
+  </header>
+   <main class="my-16">
+   
+     <section class=" w-11/12 mx-auto   justify-center">
+      <h1 class="text-4xl lg:text-5xl font-bold my-10">Important FAQ .... </h1>
+    <div class="collapse collapse-arrow   border-2  p-6  border-gray-300 rounded-lg bg-base-200">
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title texl-2xl lg:text-3xl font-bold"> What is the Document Object Model (DOM)?</div>
+        <div class="collapse-content">
+          <p class="text-lg w-4/6 font-semibold"> DOM is Document Object Model .It is a programming interface for wev documents. It represents the structure of a document as a tree of objects. Javascript can manipulate this tree structure, allowing developers to dynamically alter the content and appearance of a webpage..</p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow  border-2  p-6  border-gray-300 rounded-lg bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title  texl-2xl lg:text-3xl font-bold"> How do you select an element from the DOM?</div>
+        <div class="collapse-content">
+          <p class=" text-lg font-semibold w-4/6">Selecting an element from the DOM (Document Object Model) can be done using various methods in JavaScript. Here are some common techniques: 1."getElementById"method 2. "getElementByClassName" method 3. "gatElementByTagName"methods 4."querySelector"method 5."querySelectorAll"method .</p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow border-2  p-6  border-gray-300 rounded-lg bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title texl-2xl lg:text-3xl font-bold"> What is event delegation in the context of the DOM, and why is it useful?</div>
+        <div class="collapse-content">
+          <p class=" text-lg font-semibold w-4/6"> Event delegation refers to the process of using event propagation (bubbling) to handle events at a higher level in the DOM than the element on which the event originated. It allows us to attach a single event listener for elements that exist now or in the future. </p>
+        </div>
+        <!-- The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a document as a tree of objects, where each object corresponds to a part of the document, such as elements, attributes, and text. JavaScript can manipulate this tree structure, allowing developers to dynamically alter the content and appearance of a webpage. -->
+      </div>
+      <div class="collapse collapse-arrow p-6 border-2  border-gray-300 rounded-lg bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title texl-2xl lg:text-3xl font-bold">How do you manipulate an element's attributes and styles using the DOM?</div>
+        <div class="collapse-content">
+          <p class=" text-lg font-semibold w-4/6">
+            Manipulating Element's Attributes classList object only provide methods to change the class of an element. If you want to change other attributes like id , href , you can use the setAttribute() method. </p>
+        </div>
+      </div>
+</section>
+</main>
+    <script src="./js/blog.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>

@@ -1,6 +1,3 @@
-const accountBalance = document.getElementById('current-balance');
-let  accountBalanceNum = parseFloat(accountBalance.innerText)
-
 
 document.getElementById('donation-btn').addEventListener('click',function(){
     document.getElementById('donation-card').classList.remove('hidden')
@@ -48,8 +45,8 @@ function addHistory(title){
     const historyItem = document.createElement('div');
     historyItem.className= 'border-2 border-gray-400 rounded-lg p-4 mb-5'
     const date= new Date();
-    historyItem.innerHTML=`<p>${title}</p>
-    <p>Date: ${date.toUTCString()}</p>
+    historyItem.innerHTML=`<p class=" text-xl font-semibold mb-4">${title}</p>
+    <p class="text-lg px-2 py-3 bg-slate-100">Date: ${date.toUTCString()}</p>
     `
     historyList.appendChild(historyItem);
 }
@@ -66,8 +63,8 @@ function closeModal(){
 
 function toggleBtn(id){
     
-    document.getElementById('donation-btn').classList.remove('bg-lime-300');
-    document.getElementById('history-btn').classList.remove('bg-lime-300');
+    document.getElementById('donation-btn').classList.remove('bg-lime-300' );
+    document.getElementById('history-btn').classList.remove('bg-lime-300' );
     document.getElementById(id).classList.add('bg-lime-300');
 
 }
