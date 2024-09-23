@@ -1,71 +1,39 @@
+const accountBalance = document.getElementById('current-balance');
+let  accountBalanceNum = parseFloat(accountBalance.innerText)
 
 
-document.getElementById('donate-btn').addEventListener('click', function(event){
-    event.preventDefault();
-    const currentBalance = getTextValueById('current-balance');
-    const donateAmount = getInputValueById('donate-amount');
-     const donateBalance = getTextValueById('donate-balance');
-    
-     
-     let balance =0;
-    
-     if(donateAmount < 0){
-         alert('Please enter the valid donation amount');
-          return ;  
-      } 
-    if(currentBalance < donateAmount){
-     alert('Please enter the valid donation amount')
-     return ;
+document.getElementById('donation-btn').addEventListener('click',function(){
 
-    }else{
+})
 
-        const newBalance = currentBalance -donateAmount;
-
-        document.getElementById('current-balance').innerText =newBalance;
-        balance = donateBalance +donateAmount ;
-         document.getElementById('donate-balance').innerText =balance;
-         document.getElementById('show-modal').classList.remove('hidden')
-
+function donate(cardNumber){
+    const currentBalance = parseFloat(document.getElementById('current-balance').innerText);
+    const donateAmount = document.getElementById(`donate-amount${cardNumber}`);
+    const donationAmount = parseFloat(donateAmount.value);
+    if(isNaN(donationAmount) || donationAmount <= 0 || donationAmount > currentBalance){
+        alert('Please enter a valid  donation amount')
+        return
     }
-    
-        
 
-       
-})
-
-
-// donate part-2
-document.getElementById('donate-btn1').addEventListener('click', function(){
-   
-    const currentBalance = getTextValueById('current-balance');
-    const donateAmount = getInputValueById('donate-amount1');
-    const donateBalance =getTextValueById('donate-balance1');
-    let balance =0;
-    const newBalance  = currentBalance-donateAmount;
-    document.getElementById('current-balance').innerText=newBalance;
-    balance =donateAmount+donateBalance;
-    document.getElementById('donate-balance1').innerText = balance;
-
-    document.getElementById('show-modal-1').classList.remove('hidden')
-
-
-})
-
-
-// donate part -3
-document.getElementById('donate-btn2').addEventListener('click', function(){
-    const currentBalance =getTextValueById('current-balance');
-    const donateAmount = getInputValueById('donate-amount-2');
-    const donateBalance = getTextValueById('donate-balance2');
-    let balance =0;
-    const newBalance =currentBalance-donateAmount;
+    const newBalance = currentBalance -donationAmount;
     document.getElementById('current-balance').innerText =newBalance;
-    balance= donateBalance + donateAmount;
-    document.getElementById('donate-balance2').innerText = balance;
 
-    document.getElementById('show-modal-2').classList.remove('hidden')
+    const currentDonate =document.getElementById(`donate-balance${cardNumber}`);
+    const newDonateBalance = parseFloat(currentDonate.innerText);
+    currentDonate.innerText = (newDonateBalance + donationAmount).toFixed(2)
+      donateAmount.value = '';
+      openModal();
 
-     
+}
 
-})
+function openModal(){
+    document.getElementById('successModal').classList.remove('hidden');
+
+}
+function closeModal(){
+    document.getElementById('successModal').classList.add('hidden')
+}
+
+
+   
 
